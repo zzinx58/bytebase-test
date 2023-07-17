@@ -98,3 +98,11 @@ style={{ backgroundImage: "url('login-bg.webp')" }} cool.
 bytebase 的页面响应式有点难度，没能完全理解和使用，暂放。
 { [key: string]: string }
 字符串对象读取类型·问题。
+
+删除 lint 处理，vercel 部署
+"lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+可以先本地 build 一下查看部署可能出现的问题
+tsconfig 配置处理
+"noUnusedLocals": false,
+"noUnusedParameters": false,
+第一个配置 false 即可
